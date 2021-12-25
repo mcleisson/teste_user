@@ -1,25 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Este projeto foi feito nas versões:
+Ruby - 3.0.3p157
+Rails - 6.1.4.4
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# teste_user
+* Procedimento para rodar o projeto
+  * Faça o download do projeto para seu computador local;
+  * Altere o usuário e senha do banco de dados no arquivo database.yml que está na pasta config;
+  * rode o comando: rake db:create db:migrate db:seed
+    este comando irá criar o banco de dados, em seguida criar as tabelas no banco e alimentar a tabela Users com os usuários.
+  *

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nat:</strong>
+  <%= @user.nat %>
+</p>
+
+<p>
+  <strong>Seed:</strong>
+  <%= @user.seed %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Picture large:</strong>
+  <%= @user.picture_large %>
+</p>
+
+<p>
+  <strong>Picture thumbnail:</strong>
+  <%= @user.picture_thumbnail %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

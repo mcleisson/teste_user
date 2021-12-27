@@ -1,39 +1,41 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Nat</th>
-      <th>Seed</th>
-      <th>Gender</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Picture large</th>
-      <th>Picture thumbnail</th>
-      <th colspan="3"></th>
+      <th scope="col">Nat</th>
+      <th scope="col">Seed</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Picture large</th>
+      <th scope="col">Picture thumbnail</th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.nat %></td>
-        <td><%= user.seed %></td>
-        <td><%= user.gender %></td>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.picture_large %></td>
-        <td><%= user.picture_thumbnail %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td scope="row"><%= user.nat %></td>
+        <td scope="row"><%= user.seed %></td>
+        <td scope="row"><%= user.gender %></td>
+        <td scope="row"><%= user.name %></td>
+        <td scope="row"><%= user.email %></td>
+        <td scope="row"><%= user.picture_large %></td>
+        <td scope="row"><%= user.picture_thumbnail %></td>
+        
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><%= paginate @users, class: "page-link"%></li>
+    
+  </ul>
+</nav>

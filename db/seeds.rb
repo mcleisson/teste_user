@@ -13,15 +13,15 @@ puts "Registros deletados."
 rm = RestClient.get 'https://randomuser.me/api/?nat=BR&seed=giga&inc=gender,name,email,picture&results=30&format=json'
 rm_array = JSON.parse(rm)["results"]
 rm_array1 = JSON.parse(rm)["info"]
-
-rm_array.each do |(u)|
+arr = (rm_array << rm_array1).flatten
+rm_array.each_with_index do |u|
  User.create(
- name: u["first"],
- email: u["email"],
- gender: u["gender"],
- picture_large: u["large"],
- seed: u["seed"],
- nat: u["info.nat"]
+     nat: "BR",
+     seed: u["seed"],
+     name: u["name.first"],
+     email: u["email"],
+     gender: u["gender"],
+     picture_large: u["large"]
  )
 end
 puts "30 registros inseridos no banco!"

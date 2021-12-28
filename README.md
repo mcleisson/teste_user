@@ -10,7 +10,7 @@ Rails - 6.1.4.4
   * Altere o usuário e senha do banco de dados no arquivo database.yml que está na pasta config;
     Obs.: O banco de dados está configurado com o MySQL, desta forma é necessário já estar instalado e configurado na máquina local.
   * rode o comando: rake db:create db:migrate db:seed
-    este comando irá criar o banco de dados, em seguida criar as tabelas no banco e alimentar a tabela Users com os usuários. Para altarer a quantidade de usuários inseridos, abra o arquivo seeds.rb que está na pasta db, e 
+    este comando irá criar o banco de dados, em seguida criar as tabelas no banco e alimentar a tabela Users com os usuários. Para altarer a quantidade de usuários inseridos, abra o arquivo seeds.rb que está na pasta db, e altere a linha 13 na URL a variável results=30, para o valor que deseja.
   * Após isso, rode o comando rails s para subir o projeto;
   * Acesse o end. no seu navegador http://localhost:3000/users e irá aparecer a lista de usuários com paginação. 
   
